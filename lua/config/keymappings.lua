@@ -10,7 +10,7 @@ map.set('n', '<Leader>w', ':w<Cr>', { desc = 'Save' });
 map.set('n', '<Leader>q', ':w!<Cr>:q!<Cr>', { desc = 'Quit and save.' });
 
 -- Force quit
-map.set('n', '<Leader><leader>q', ':q!<Cr>', { desc = 'Force quit.' });
+map.set('n', '<Leader><leader>q', '<Cmd>only<Cr><Cmd>q!<Cr>', { desc = 'Force quit all.' });
 
 -- Scroll screen.
 -- map.set({ 'n', 'v' }, '<C-K>', '30zk', { desc = 'Scroll up' });
@@ -37,6 +37,10 @@ map.set('n', '<C-k>', [[<Cmd>wincmd k<CR>]], {
 
 map.set('n', '<C-j>', [[<Cmd>wincmd j<CR>]], {
     desc = "Navigate to the downwards window."
+});
+
+map.set('n', '<C-q>', [[<Cmd>wincmd q<CR>]], {
+    desc = "Close current window."
 });
 
 -- Insert mode navigation.

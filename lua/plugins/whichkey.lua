@@ -181,6 +181,10 @@ return {
 				hl = "",
 				color = "purple"
 			},
+			{ '<c-a-l>', [[<C-w>>]], desc = "Increase window width." },
+			{ '<c-a-h>', [[<C-w><]], desc = "Decrease window width." },
+			{ '<c-a-j>', [[<C-w>+]], desc = "Increase window height." },
+			{ '<c-a-k>', [[<C-w>-]], desc = "Decrease window height." },
 			{
 				"<leader>=",
 				"<C-w>=",

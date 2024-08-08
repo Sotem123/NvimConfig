@@ -50,11 +50,21 @@ return {
 	vim.keymap.set("n", "<leader><C-2>", function() harpoon:list():replace_at(2) end, { desc = "Replace bookmark 2." });
 	vim.keymap.set("n", "<leader><C-3>", function() harpoon:list():replace_at(3) end, { desc = "Replace bookmark 3." });
 	vim.keymap.set("n", "<leader><C-4>", function() harpoon:list():replace_at(4) end, { desc = "Replace bookmark 4." });
+	vim.keymap.set("n", "<leader><C-5>", function() harpoon:list():replace_at(5) end, { desc = "Replace bookmark 5." });
+	vim.keymap.set("n", "<leader><C-6>", function() harpoon:list():replace_at(6) end, { desc = "Replace bookmark 6." });
+	vim.keymap.set("n", "<leader><C-7>", function() harpoon:list():replace_at(7) end, { desc = "Replace bookmark 7." });
+	vim.keymap.set("n", "<leader><C-8>", function() harpoon:list():replace_at(8) end, { desc = "Replace bookmark 8." });
+	vim.keymap.set("n", "<leader><C-9>", function() harpoon:list():replace_at(9) end, { desc = "Replace bookmark 9." });
 
 	vim.keymap.set("n", "<C-1>", function() harpoon:list():select(1) end, { desc = "Open bookmark 1."});
 	vim.keymap.set("n", "<C-2>", function() harpoon:list():select(2) end, { desc = "Open bookmark 2."});
 	vim.keymap.set("n", "<C-3>", function() harpoon:list():select(3) end, { desc = "Open bookmark 3."});
 	vim.keymap.set("n", "<C-4>", function() harpoon:list():select(4) end, { desc = "Open bookmark 4."});
+	vim.keymap.set("n", "<C-5>", function() harpoon:list():select(5) end, { desc = "Open bookmark 5."});
+	vim.keymap.set("n", "<C-6>", function() harpoon:list():select(6) end, { desc = "Open bookmark 6."});
+	vim.keymap.set("n", "<C-7>", function() harpoon:list():select(7) end, { desc = "Open bookmark 7."});
+	vim.keymap.set("n", "<C-8>", function() harpoon:list():select(8) end, { desc = "Open bookmark 8."});
+	vim.keymap.set("n", "<C-9>", function() harpoon:list():select(9) end, { desc = "Open bookmark 9."});
 
 	-- Toggle previous & next buffers stored within Harpoon list
 	vim.keymap.set("n", "<C-S-P>", function() harpoon:list():prev() end);

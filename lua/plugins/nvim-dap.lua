@@ -69,7 +69,7 @@ return {
 	dap.adapters.gdb = {
 	    type = "executable",
 	    command = "gdb",
-	    rags = { "-i", "dap" }
+	    args = { "-i", "dap" }
 	};
 
 	dap.configurations.c = {
@@ -81,7 +81,7 @@ return {
 		    return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
 		end,
 		cwd = "${workspaceFolder}",
-		stopAtBeginningOfMainSubprogram = false,
+		stopAtBeginningOfMainSubprogram = true,
 	    },
 	};
     end

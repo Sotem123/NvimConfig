@@ -66,7 +66,15 @@ return {
 						desc = "Open terminal tabbed.",
 					}
 				}
-			},
+			},{
+				"<leader><leader>t",
+				function()
+					local size = PercentageToScreenSize(100 / 3, true);
+
+					vim.cmd("ToggleTerm direction=horizontal size=" .. size);
+				end,
+				desc = "Open terminal horizontal.",
+			}
 		});
 
 		-- function _G.set_terminal_keymaps()
