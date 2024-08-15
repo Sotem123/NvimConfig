@@ -1,7 +1,7 @@
 local foldGroup = vim.api.nvim_create_augroup('foldGroup', { clear = true });
 
 vim.api.nvim_create_autocmd({
-	"BufWinEnter"
+	"BufWritePost"
 }, {
 	group = foldGroup,
 	pattern = "*",
@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd({
 });
 
 vim.api.nvim_create_autocmd({
-	"BufWinLeave"
+	"BufWinEnter"
 }, {
 	group = foldGroup,
 	pattern = "*",

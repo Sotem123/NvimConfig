@@ -262,6 +262,16 @@ return {
 					},
 				},
 				{
+					"<leader>lI",
+					"<cmd>lua vim.lsp.buf.implementation()<cr>",
+					desc = "Show all symbol implementations.",
+					icon = {
+						icon = "",
+						hl = "",
+						color = "purple"
+					},
+				},
+				{
 					"<leader>lr",
 					"<cmd>lua vim.lsp.buf.rename()<cr>",
 					desc = "Rename the current symbol.",
