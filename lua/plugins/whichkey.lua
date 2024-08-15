@@ -183,8 +183,8 @@ return {
 			},
 			{ '<c-a-l>', [[<C-w>>]], desc = "Increase window width." },
 			{ '<c-a-h>', [[<C-w><]], desc = "Decrease window width." },
-			{ '<c-a-j>', [[<C-w>+]], desc = "Increase window height." },
-			{ '<c-a-k>', [[<C-w>-]], desc = "Decrease window height." },
+			{ '<c-a-k>', [[<C-w>+]], desc = "Increase window height." },
+			{ '<c-a-j>', [[<C-w>-]], desc = "Decrease window height." },
 			{
 				"<leader>=",
 				"<C-w>=",
@@ -242,11 +242,54 @@ return {
 			},
 		}
 
+		local lspMappings = {
+			{
+				"<leader>l",
+				group = "LSP actions",
+				icon = {
+					icon = "",
+					hl = "",
+					color = "blue"
+				},
+				{
+					"<leader>lR",
+					"<cmd>lua vim.lsp.buf.references()<cr>",
+					desc = "Show all symbol references.",
+					icon = {
+						icon = "",
+						hl = "",
+						color = "blue"
+					},
+				},
+				{
+					"<leader>lr",
+					"<cmd>lua vim.lsp.buf.rename()<cr>",
+					desc = "Rename the current symbol.",
+					icon = {
+						icon = "󰑕",
+						hl = "",
+						color = "green"
+					},
+				{
+					"<leader>ld",
+					"<cmd>lua vim.lsp.buf.definition()<cr>",
+					desc = "Jump to the definition of the symbol.",
+					icon = {
+						icon = "󰑕",
+						hl = "",
+						color = "green"
+					},
+				},
+				},
+			}
+		};
+
 		wk.add(exploreMappings);
 		wk.add(codeActions);
 		wk.add(telescopeMappings);
 		wk.add(mainMappings);
 		wk.add(utilMappings);
+		wk.add(lspMappings);
 	end,
 	dependencies = {
 		"echasnovski/mini.icons",

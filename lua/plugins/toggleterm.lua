@@ -1,5 +1,4 @@
-return {
-	'akinsho/toggleterm.nvim',
+return { 'akinsho/toggleterm.nvim',
 	version = "*",
 	config = function()
 		local tt = require("toggleterm");
@@ -91,8 +90,8 @@ return {
 
 		local opts = { noremap = true, silent = true };
 
-		vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts);
-		vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts);
+		vim.keymap.set('t', '<c-n>', [[<C-\><C-n>]], opts);
+		-- vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts);
 		vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts);
 		vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts);
 		vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts);

@@ -12,7 +12,7 @@ return {
 	"nvim-telescope/telescope.nvim",
     },
     keys = {
-	{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+	{ "<leader><leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
     },
     config = function()
 
