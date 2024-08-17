@@ -44,16 +44,19 @@ return {
 					'<leader>de',
 					function()
 
-						local selectedText = bh.GetBufferSelection();
-
-						if selectedText == nil then
-							print('Please select a text for the expression.');
-							return;
-						end
-
-						dap.repl.execute(selectedText);
+						-- local expression = io.input('Expression: ');
+						--
+						-- if (expression == nil) then
+						--
+						-- 	print('Please provde a valid expression.');
+						-- 	return;
+						-- end
+						--
+						-- expression = '#include <stdio.h>\n' .. 'printf(%s,' .. expression .. ')';
+						--
+						widgets.hover(vim.fn.expand("<cexpr>"));
 					end,
-					desc = "Toggle the debug terminal.",
+					desc = "Evaluate the expression.",
 					icon = {
 						icon = "󰙵",
 						hl = "",
@@ -121,7 +124,7 @@ return {
 					'<leader>di',
 					--group = "Debug",
 					function()
-						widgets.hover(vim.fn.expand("<cWORD>"));
+						widgets.hover();
 					end,
 					desc = "View information about the current item in a popup.",
 					icon = {
