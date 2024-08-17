@@ -213,7 +213,7 @@ return {
 			{
 				"<leader><leader>D",
 				"<cmd>diffoff<cr>",
-				desc = "Select the current file for diff comparison.",
+				desc = "Deselect the current file for diff comparison.",
 				icon = {
 					icon = "",
 					hl = "",
@@ -265,6 +265,26 @@ return {
 					"<leader>lI",
 					"<cmd>lua vim.lsp.buf.implementation()<cr>",
 					desc = "Show all symbol implementations.",
+					icon = {
+						icon = "",
+						hl = "",
+						color = "purple"
+					},
+				},
+				{
+					"<leader>lh",
+					"<cmd>lua vim.lsp.buf.hover()<cr>",
+					desc = "Show all symbol information.",
+					icon = {
+						icon = "",
+						hl = "",
+						color = "purple"
+					},
+				},
+				{
+					"<leader>lH",
+					"<cmd>lua vim.lsp.buf.hover();vim.lsp.buf.hover()<cr>",
+					desc = "Show all symbol information and keep the window open when moving the cursor.",
 					icon = {
 						icon = "",
 						hl = "",
