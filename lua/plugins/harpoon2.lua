@@ -7,7 +7,7 @@ return {
     },
     config = function()
 
-	local harpoon = require("harpoon");	
+	local harpoon = require("harpoon");
 	local wk = require("which-key");
 
 	harpoon:setup();

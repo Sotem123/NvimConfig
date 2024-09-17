@@ -41,6 +41,19 @@ return {
 					},
 				},
 				{
+					'<leader>dD',
+					function()
+
+						dap.set_breakpoint(vim.fn.input("Condition: "));
+					end,
+					desc = "Set conditional breakpoint.",
+					icon = {
+						icon = "",
+						hl = "",
+						color = "yellow"
+					},
+				},
+				{
 					'<leader>de',
 					function()
 
@@ -64,7 +77,7 @@ return {
 					},
 				},
 				{
-					'<leader>dt',
+					'<leader>do',
 					function()
 						dap.repl.toggle();
 					end,
