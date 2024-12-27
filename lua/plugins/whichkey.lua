@@ -244,6 +244,16 @@ return {
 
 		local lspMappings = {
 			{
+				"<leader>a",
+				"<cmd> lua vim.lsp.buf.code_action()<CR>",
+				desc = "Code action",
+				icon = {
+					icon = "",
+					hl = "",
+					color = "yellow"
+				},
+			},
+			{
 				"<leader>l",
 				group = "LSP actions",
 				icon = {
@@ -300,16 +310,16 @@ return {
 						hl = "",
 						color = "green"
 					},
-				{
-					"<leader>ld",
-					"<cmd>lua vim.lsp.buf.definition()<cr>",
-					desc = "Jump to the definition of the symbol.",
-					icon = {
-						icon = "󰑕",
-						hl = "",
-						color = "green"
+					{
+						"<leader>ld",
+						"<cmd>lua vim.lsp.buf.definition()<cr>",
+						desc = "Jump to the definition of the symbol.",
+						icon = {
+							icon = "󰑕",
+							hl = "",
+							color = "green"
+						},
 					},
-				},
 				},
 			}
 		};
